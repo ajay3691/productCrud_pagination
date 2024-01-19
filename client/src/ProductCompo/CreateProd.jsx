@@ -70,7 +70,7 @@ function CreateProd() {
 
     if (validateForm()) {
       axios
-        .post('http://localhost:5000/api/product', product)
+        .post('https://product-crud-pagination-3vxq.vercel.app/api/product', product)
         .then((resp) => {
           navigate('/admin');
         })

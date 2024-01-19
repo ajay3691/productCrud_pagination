@@ -48,7 +48,7 @@ function UpdateProd() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/product/${id}`)
+      .get(`https://product-crud-pagination-3vxq.vercel.app/api/product/${id}`)
       .then((resp) => {
         setProduct(resp.data.product);
       })
@@ -72,7 +72,7 @@ function UpdateProd() {
     clearAlerts();
 
     axios
-      .put(`http://localhost:5000/api/product/${id}`, product)
+      .put(`https://product-crud-pagination-3vxq.vercel.app/api/product/${id}`, product)
       .then((resp) => {
         navigate('/admin');
       })

@@ -10,7 +10,7 @@ function Admin() {
   const productsPerPage = 8;
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://product-crud-pagination-3vxq.vercel.app/api/products')
       .then((resp) => {
         setProducts(resp.data.products);
       })
@@ -20,7 +20,7 @@ function Admin() {
   }, []);
 
   const deleteHandler = (id) => {
-    axios.delete(`http://localhost:5000/api/product/${id}`)
+    axios.delete(`https://product-crud-pagination-3vxq.vercel.app/api/product/${id}`)
       .then((resp) => {
         setProducts(products.filter(prod => prod._id !== id));
       })
