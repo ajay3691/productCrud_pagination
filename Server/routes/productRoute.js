@@ -12,7 +12,9 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + '-' + file.originalname); 
   },
 });
-
+productRoute.get("/", (req, resp) => {
+  resp.send("user product running .......")
+})
 const upload = multer({
   storage,
   fileFilter: (req, file, cb) => {
