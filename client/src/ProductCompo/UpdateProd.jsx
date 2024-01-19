@@ -74,6 +74,7 @@ function UpdateProd() {
     axios
       .put(`https://product-crud-pagination-3vxq.vercel.app/api/product/${id}`, product)
       .then((resp) => {
+        alert("Product updated succesfully")
         navigate('/admin');
       })
       .catch((error) => {

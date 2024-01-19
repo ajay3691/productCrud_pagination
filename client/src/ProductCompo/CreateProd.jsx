@@ -72,6 +72,8 @@ function CreateProd() {
       axios
         .post('https://product-crud-pagination-3vxq.vercel.app/api/product', product)
         .then((resp) => {
+          alert("Product Created succesfully")
+
           navigate('/admin');
         })
         .catch((error) => {
